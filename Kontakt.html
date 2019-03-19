@@ -1,0 +1,172 @@
+﻿
+<!DOCTYPE html>
+<!--Copyright: Gruppe 118: Sidsel Qvistgaard Imer, Cecilie Johansen og Patrick Bo Elkjær, 2018-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head >
+    <meta name="title" content="Espresso House - kaffebar Aalborg.">
+    <meta name="description" content="Har du brug for at komme i kontakt med Espresso House, 
+     så ring til os på 52 80 27 75. Du er også altid mere end velkommen til, at komme ned i kaffebaren, som lokaliseret i Aalborg til en god kop kaffe.">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <meta name="robots" content="noindex">
+    <link href="CSS/StyleSheet.css" rel="stylesheet" />
+    <link href="CSS/Tablet.css" rel="stylesheet" />
+    <link href="CSS/Mobile.css" rel="stylesheet" />
+    <link href="CSS/animate.css" rel="stylesheet" />
+    <link href="CSS/skeleton_desktop.css" rel="stylesheet" />
+    <link href="CSS/fontawesome-all.min.css" rel="stylesheet" />
+    <link href="CSS/Normalize.css" rel="stylesheet" />
+    <link rel="shortcut icon" type="image/png" href="Images/logo_EspressoHouse.png" />
+    <link href="https://fonts.googleapis.com/css?family=Alegreya|Lato" rel="stylesheet" />
+    <title>Espresso House</title>
+</head>
+<body>
+    <style>
+        .desktop-nav ul #nav-kontakt a {
+  text-decoration: underline;
+}
+           .mobile-nav #lille-kontakt a {
+            background: #633425;
+        }
+    </style>
+        <div id="header"></div>
+        <div class="container">
+            <section></section>
+            <div class="kontakt-img">
+                <img src="Images/Kontakt.jpg" />
+                <button type="button" name="button" class="Down-kontakt Down"><i class="hide-S fa fa-arrow-down animated slideInDown fa-2x" aria-hidden="true"></i></button>
+            </div>
+            <section class="kontakt row">
+
+                <div class="kontakt-box col XL-12 XS-12">
+                    <div class="kontakt-box-info XL-4 col o-XL-2 S-10 o-S-1">
+
+                    </div>
+                </div>
+
+                <div class="col XL-5 o-XL-6 M-12 o-M-r S-12 o-XS-r">
+                    <div id="map"></div>
+                </div>
+
+     <div class="kontrol col S-10 o-S-1">
+
+     </div>
+
+            </section>
+        </div>
+        <div class="mobileNav-Place"></div>
+    <footer>
+        <div id="footer" class="row">
+            <div class="col XL-12 o-XL-2">
+                <div class="mini-nav col XL-2 M-3">
+                    <h3>Navigation</h3>
+                    <p style="color: white"><a href="Menukort.html">Menukort </a></p><br />
+                    <p style="color: white"><a href="Openinghours.html">Åbningstider </a></p><br />
+                    <p style="color: white"><a href="Vores-kaffe.html">Vores Kaffe </a></p> <br />
+                    <p style="color: white"><a href="Om-Os.html">Om Os </a></p><br />
+                    <p style="color: white"><a href="Kontakt.html">Kontakt </a></p><br />
+                </div>
+                <div class="foot-open col XL-3 o-XL-1 o-M-0 M-3">
+                    <h3>Åbningstider</h3>
+                    <p>
+                        Mandag - Fredag <br />
+                        Kl. 9 - 19
+                    </p>
+                    <p>
+                        Lørdag - Søndag <br />
+                        Kl. 8 - 20
+                    </p>
+
+                </div>
+                <div class="Foot-kontakt col XL-2 o-XL-0 M-3">
+                    <h3>Kontakt</h3>
+                    <p>
+                        Espresso House <br />
+                        Vesterå 17, 9000 Aalborg <br />
+                        <img src="Images/Banner_groen_eng_847x274.gif" />
+
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpRkUZRtAqAtj8jFyL5J_cigmqeXX8xng&callback=initMap"></script>
+    <script>
+        $("li .ikon a").hover(function (e) {
+            $(this).addClass('animated shake');
+        }, function (e) {
+            $(this).removeClass('animated shake');
+        });
+        $(document).ready(function () {
+            $(window).resize(function () {
+                var viewportWidth = $(window).width();
+                var viewportHeight = $(window).height();
+
+                if ($(window).width() < 480) {
+                    $('.mobileNav-Place').load('Nav-footer.html #Mobile-Nav');
+                    $('#header').load('Nav-footer.html .mobile-topbar');
+                    $('#Desktop-Nav').hide();
+                    $('.desktop-nav').hide();
+
+                }
+                else {
+
+                    $('#header').load('Nav-footer.html #Desktop-Nav');
+                    $('.mobile-nav').hide();
+                }
+            })
+            
+            $(window).resize();
+
+
+        });
+
+        function initMap() {
+            var uluru = { lat: 57.0508467, lng: 9.9183478 };
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 16,
+                center: uluru
+            });
+            var contentString = '<div id="content">' +
+           '<div id="siteNotice">' +
+           '</div>' +
+           '<h2>Espresso House</h2>' +
+           '<div id="bodyContent">' +
+           '<p><b> Email</b>: EspressoHouse@gmail.com</p>' +
+           '<p><b>Telfonnummer</b>: 52802775 </p>' +
+           '<p><b>Adresse:</b> Vesterå 17, 9000 Aalborg </p>' +
+           '</div>' +
+           '</div>';
+
+
+
+
+            var infowindow = new google.maps.InfoWindow({
+                content: contentString,
+                maxWidth: 300
+            });
+
+            var marker = new google.maps.Marker({
+                position: uluru,
+                map: map,
+                title: 'Uluru (Ayers Rock)'
+            });
+            marker.addListener('click', function () {
+                infowindow.open(map, marker);
+
+            });
+
+            infowindow.open(map, marker);
+        }
+
+    </script>
+    <script src="//app.storyblok.com/f/storyblok-latest.js?t=z8VcL2O8QYF5fCmHjCiUywtt"></script>
+    <script src="JS/kontakt.js"></script>
+    <script src="JS/fontawesome-all.js"></script>
+</body>
+
+</html>
+

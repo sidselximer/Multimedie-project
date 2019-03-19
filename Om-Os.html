@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html>
+<!--Copyright: Gruppe 118: Sidsel Qvistgaard Imer, Cecilie Johansen og Patrick Bo Elkjær, 2018-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="title" content="Espresso House - kaffebar Aalborg.">
+    <meta name="description" content="Espresso House bestræber sig efter, at levere kaffe af den allerhøjeste kvalitet, til en overkommelig pris. 
+     Espresso House ønsker at skære kaffeoplevelsen helt ind til det essentielle, og til blot samværet mellem to mennesker over en kop fantastisk kaffe.">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <meta name="robots" content="noindex">
+    <link href="CSS/StyleSheet.css" rel="stylesheet" />
+    <link href="CSS/Tablet.css" rel="stylesheet" />
+    <link href="CSS/Mobile.css" rel="stylesheet" />
+    <link href="CSS/animate.css" rel="stylesheet" />
+    <link href="CSS/skeleton_desktop.css" rel="stylesheet" />
+    <link href="CSS/fontawesome-all.min.css" rel="stylesheet" />
+    <link href="CSS/Normalize.css" rel="stylesheet" />
+    <link rel="shortcut icon" type="image/png" href="Images/logo_EspressoHouse.png" />
+    <link href="https://fonts.googleapis.com/css?family=Alegreya|Lato" rel="stylesheet" />
+    <title>Espresso House</title>
+</head>
+<body class="om-os-body">
+    <style>
+        .desktop-nav ul #nav-om a {
+            text-decoration: underline;
+        }
+
+         .mobile-nav #lille-om a {
+            background: #633425;
+        }
+    </style>
+        <div id="header"></div>
+        <div class="container">
+            <section class="row">
+                <div class="om-os-img">
+
+                        <img src="Images/omOs%20(1).jpg" />
+                    <div class="om-os-img-mobil">
+                        <img src="Images/omOsMobil (5).jpg" />
+                    </div>
+                    
+                    <button type="button" name="button" class="Down_os Down"><i class=" fa fa-arrow-down animated slideInDown fa-2x" aria-hidden="true"></i></button>
+                </div>
+            </section>
+            <section class="info-box-om row "></section>
+
+            <section class="timeline row">
+
+                <ul class="timeline-info">
+                    <li>
+                        <h2>Start</h2>
+
+                    </li>
+
+
+                </ul>
+
+            </section>
+            
+        </div>
+        <div class="mobileNav-Place"></div>
+    <footer>
+        <div id="footer" class="row">
+            <div class="col XL-12 o-XL-2">
+                <div class="mini-nav col XL-2 M-3">
+                    <h3>Navigation</h3>
+                    <p style="color: white"><a href="Menukort.html">Menukort </a></p><br />
+                    <p style="color: white"><a href="Openinghours.html">Åbningstider </a></p><br />
+                    <p style="color: white"><a href="Vores-kaffe.html">Vores Kaffe </a></p> <br />
+                    <p style="color: white"><a href="Om-Os.html">Om Os </a></p><br />
+                    <p style="color: white"><a href="Kontakt.html">Kontakt </a></p><br />
+                </div>
+                <div class="foot-open col XL-3 o-XL-1 o-M-0 M-3">
+                    <h3>Åbningstider</h3>
+                    <p>
+                        Mandag - Fredag <br />
+                        Kl. 9 - 19
+                    </p>
+                    <p>
+                        Lørdag - Søndag <br />
+                        Kl. 8 - 20
+                    </p>
+
+                </div>
+                <div class="Foot-kontakt col XL-2 o-XL-0 M-3">
+                    <h3>Kontakt</h3>
+                    <p>
+                        Espresso House <br />
+                        Vesterå 17, 9000 Aalborg <br />
+                        <img src="Images/Banner_groen_eng_847x274.gif" />
+
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script>
+        $("li .ikon a").hover(function (e) {
+            $(this).addClass('animated shake');
+        }, function (e) {
+            $(this).removeClass('animated shake');
+        });
+        $(document).ready(function () {
+            $(window).resize(function () {
+                var viewportWidth = $(window).width();
+                var viewportHeight = $(window).height();
+
+                if ($(window).width() < 480) {
+                    $('.mobileNav-Place').load('Nav-footer.html #Mobile-Nav');
+                    $('#header').load('Nav-footer.html .mobile-topbar');
+                    $('#Desktop-Nav').hide();
+
+                }
+                else {
+
+                    $('#header').load('Nav-footer.html #Desktop-Nav');
+                    $('.mobile-nav').hide();
+                }
+            })
+           
+            $(window).resize();
+
+
+        });
+    </script>
+    <script src="//app.storyblok.com/f/storyblok-latest.js?t=z8VcL2O8QYF5fCmHjCiUywtt"></script>
+    <script src="JS/Om-Os.js"></script>
+    <script src="JS/fontawesome-all.js"></script>
+</body>
+
+</html>
+
+
